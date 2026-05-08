@@ -20,34 +20,36 @@ A collection of information about HuggingFace's **GUI Agents Evaluation Suite** 
 
 ## Desktop Environment-Related Grounding Benchmarks
 
-These benchmarks evaluate GUI grounding (element localization / click accuracy) in **desktop computer environments** (Windows, macOS, Linux):
+These are the **Desktop** platform benchmarks from ScreenSuite's Perception/Grounding category (as listed in the [official blog post](https://huggingface.co/blog/screensuite)):
 
-- **ScreenSpot**: [huggingface.co/datasets/rootsautomation/ScreenSpot](https://huggingface.co/datasets/rootsautomation/ScreenSpot)
-  - The original GUI grounding benchmark covering Mobile (iOS, Android), Web, and **Desktop** (macOS, Windows, Linux).
+- **ScreenSpot-v2**: [https://huggingface.co/datasets/HongxinLi/ScreenSpot_v2](https://huggingface.co/datasets/HongxinLi/ScreenSpot_v2)
+- **ScreenSpot-Pro**: [https://huggingface.co/datasets/HongxinLi/ScreenSpot-Pro](https://huggingface.co/datasets/HongxinLi/ScreenSpot-Pro)
 
-- **ScreenSpot-Pro**: [huggingface.co/datasets/likaixin/ScreenSpot-Pro](https://huggingface.co/datasets/likaixin/ScreenSpot-Pro)
-  - GUI grounding for **professional high-resolution desktop environments**. Covers 23 applications across 5 industries (Development, Creative, CAD/Engineering, Scientific/Analytical, Office Suite) and 3 operating systems (Windows, macOS, Linux).
-  - Also mirrored at: [huggingface.co/datasets/HongxinLi/ScreenSpot-Pro](https://huggingface.co/datasets/HongxinLi/ScreenSpot-Pro) (used by ScreenSuite)
+Additionally, the original **ScreenSpot** benchmark also contains desktop split data (Windows, macOS, Linux):
 
-- **WorldGUI-Bench**: [huggingface.co/datasets/hhenryz/WorldGUI-Bench](https://huggingface.co/datasets/hhenryz/WorldGUI-Bench)
-  - A dynamic desktop GUI benchmark covering 10 widely used desktop and web applications with tasks instantiated under various initial states.
-  - 📄 Paper: [arxiv.org/abs/2502.08047](https://arxiv.org/abs/2502.08047)
-
-- **OSWorld**: [github.com/xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld)
-  - A multi-step agent benchmark for real computer environments (Ubuntu, Windows, macOS). Part of ScreenSuite's multi-step evaluation.
+- **ScreenSpot**: [https://huggingface.co/datasets/rootsautomation/ScreenSpot](https://huggingface.co/datasets/rootsautomation/ScreenSpot)
 
 ---
 
-## Other Grounding Benchmarks in ScreenSuite
+## Desktop Multi-Step Agent Benchmark (ScreenSuite)
 
-These are also part of ScreenSuite's Grounding category but focus on **Web** or **Mobile** environments:
+From ScreenSuite's Multi-Step Agents category (Desktop environment):
 
-- **ScreenSpot v2** (Web): [huggingface.co/datasets/HongxinLi/ScreenSpot_v2](https://huggingface.co/datasets/HongxinLi/ScreenSpot_v2)
-- **Visual-WebBench** (Web): [huggingface.co/datasets/visualwebbench/VisualWebBench](https://huggingface.co/datasets/visualwebbench/VisualWebBench)
-- **WebSRC** (Web): [huggingface.co/datasets/X-LANCE/WebSRC_v1.0](https://huggingface.co/datasets/X-LANCE/WebSRC_v1.0)
-- **Showdown-Clicks** (Web): [huggingface.co/datasets/generalagents/showdown-clicks](https://huggingface.co/datasets/generalagents/showdown-clicks)
-- **ScreenQA-Short** (Mobile): [huggingface.co/datasets/rootsautomation/RICO-ScreenQA-Short](https://huggingface.co/datasets/rootsautomation/RICO-ScreenQA-Short)
-- **ScreenQA-Complex** (Mobile): [huggingface.co/datasets/rootsautomation/RICO-ScreenQA-Complex](https://huggingface.co/datasets/rootsautomation/RICO-ScreenQA-Complex)
+- **OSWorld**: Benchmarking multimodal agents for open-ended tasks in real computer environments (Ubuntu, Windows, macOS).
+  - Project page: [https://os-world.github.io/](https://os-world.github.io/)
+  - GitHub: [https://github.com/xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld)
+
+---
+
+## Other Grounding Benchmarks in ScreenSuite (Web / Mobile)
+
+These are also part of ScreenSuite's Grounding/Perception category but focus on **Web** or **Mobile** environments:
+
+- **Visual-WebBench** (Web): [https://huggingface.co/datasets/visualwebbench/VisualWebBench](https://huggingface.co/datasets/visualwebbench/VisualWebBench)
+- **WebSRC** (Web): [https://huggingface.co/datasets/X-LANCE/WebSRC_v1.0](https://huggingface.co/datasets/X-LANCE/WebSRC_v1.0)
+- **Showdown-Clicks** (Web): [https://huggingface.co/datasets/generalagents/showdown-clicks](https://huggingface.co/datasets/generalagents/showdown-clicks)
+- **ScreenQA-Short** (Mobile): [https://huggingface.co/datasets/rootsautomation/RICO-ScreenQA-Short](https://huggingface.co/datasets/rootsautomation/RICO-ScreenQA-Short)
+- **ScreenQA-Complex** (Mobile): [https://huggingface.co/datasets/rootsautomation/RICO-ScreenQA-Complex](https://huggingface.co/datasets/rootsautomation/RICO-ScreenQA-Complex)
 
 ---
 
@@ -60,4 +62,12 @@ uv sync --extra submodules --python 3.11
 python run.py
 ```
 
-> ⚠️ Multi-step benchmarks require a bare-metal machine to run desktop/mobile environment emulators.
+> ⚠️ Multi-step benchmarks require a bare-metal machine to run and deploy desktop/mobile environment emulators.
+
+---
+
+## References
+
+- [ScreenSuite Blog Post](https://huggingface.co/blog/screensuite)
+- [ScreenSuite GitHub Repository](https://github.com/huggingface/screensuite)
+- [ScreenSuite on HuggingFace](https://huggingface.co/screensuite)
